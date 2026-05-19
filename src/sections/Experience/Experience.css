@@ -1,0 +1,121 @@
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 20px;
+  height: 100%;
+  width: 2px;
+  background: var(--glass-border);
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 60px;
+  margin-bottom: 3rem;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 42px;
+  height: 42px;
+  background: var(--bg-primary);
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  z-index: 1;
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
+}
+
+.timeline-content {
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.timeline-duration {
+  display: inline-block;
+  font-size: 0.85rem;
+  padding: 0.3rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 2rem;
+  margin-bottom: 1rem;
+  color: var(--text-secondary);
+}
+
+.timeline-role {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.timeline-company {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.timeline-desc {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 20px;
+  }
+  .timeline-icon {
+    width: 36px;
+    height: 36px;
+    left: 2px;
+  }
+  .timeline-item {
+    padding-left: 50px;
+  }
+  .timeline-content {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline::before {
+    left: 15px;
+  }
+  .timeline-icon {
+    width: 30px;
+    height: 30px;
+    left: 0;
+  }
+  .timeline-icon svg {
+    width: 16px;
+    height: 16px;
+  }
+  .timeline-item {
+    padding-left: 40px;
+  }
+  .timeline-content {
+    padding: 1.2rem;
+  }
+  .timeline-role {
+    font-size: 1.2rem;
+  }
+}
