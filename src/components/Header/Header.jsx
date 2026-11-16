@@ -1,10 +1,26 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import './Header.css';
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+
+  const variabl = async () => {
+    try{
+      const response=await fetch("url","payload");
+      const data=await response.json();
+      console.log(data);
+    } catch(error){
+      console.log(error);
+
+    }finally{
+      console.log("finally block executed");
+    }
+
+  }
+  variabl()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,7 +36,7 @@ const Header = () => {
     <header className={`header ${scrolled ? 'scrolled' : ''}`}>
       <div className="container header-content">
         <a href="#hero" className="logo text-gradient">JB.</a>
-        
+
         <button className="mobile-menu-btn" onClick={toggleMenu} aria-label="Toggle menu">
           {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
