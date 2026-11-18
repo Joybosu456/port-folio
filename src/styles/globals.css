@@ -14,6 +14,20 @@
   --glass-border: rgba(255, 255, 255, 0.05);
 }
 
+:root[data-theme="light"] {
+  --bg-primary: #f8fafc;
+  --bg-secondary: #e8edf5;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --accent: #2563eb;
+  --accent-glow: rgba(37, 99, 235, 0.35);
+  --border-color: rgba(15, 23, 42, 0.12);
+  --gradient-text: linear-gradient(to right, #2563eb, #7c3aed);
+  --gradient-bg: linear-gradient(135deg, rgba(37,99,235,0.12) 0%, rgba(124,58,237,0.10) 100%);
+  --glass-bg: rgba(255, 255, 255, 0.82);
+  --glass-border: rgba(15, 23, 42, 0.10);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -23,9 +37,35 @@
 body {
   font-family: 'Outfit', sans-serif;
   background-color: var(--bg-primary);
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(59, 130, 246, 0.10), transparent 28rem),
+    radial-gradient(circle at 85% 75%, rgba(139, 92, 246, 0.10), transparent 30rem);
+  background-size: 140% 140%, 140% 140%;
+  background-position: 0% 50%, 100% 50%;
+  background-attachment: fixed;
   color: var(--text-primary);
   line-height: 1.6;
   overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  animation: ambientBackground 18s ease-in-out infinite alternate;
+}
+
+:root[data-theme="light"] body {
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(37, 99, 235, 0.12), transparent 28rem),
+    radial-gradient(circle at 85% 75%, rgba(124, 58, 237, 0.10), transparent 30rem);
+}
+
+@keyframes ambientBackground {
+  0% {
+    background-position: 0% 45%, 100% 55%;
+  }
+  50% {
+    background-position: 50% 55%, 50% 45%;
+  }
+  100% {
+    background-position: 100% 50%, 0% 50%;
+  }
 }
 
 html {
@@ -110,5 +150,11 @@ ul {
   }
   .section {
     padding: 3rem 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body {
+    animation: none;
   }
 }

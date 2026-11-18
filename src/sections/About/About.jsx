@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaGithub, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 import './About.css';
 
 const About = () => {
@@ -28,6 +29,38 @@ const About = () => {
             My journey has led me to work with amazing companies like Helo.ai, Bajaj Broking Ltd, and BridgeLabze Solution Ltd. 
             I love tackling complex problems and turning them into intuitive, user-friendly interfaces.
           </p>
+          <div className="about-socials">
+            <a
+              href="https://github.com/Joybosu456"
+              className="about-social-link"
+              aria-label="GitHub"
+              title="https://github.com/Joybosu456"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGithub size={22} />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/joy-web-developer/"
+              className="about-social-link"
+              aria-label="LinkedIn"
+              title="https://www.linkedin.com/in/joy-web-developer/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaLinkedin size={22} />
+            </a>
+            <a
+              href="https://wa.me/916296582055"
+              className="about-social-link"
+              aria-label="WhatsApp"
+              title="https://wa.me/916296582055"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaWhatsapp size={22} />
+            </a>
+          </div>
         </div>
         
         <div className="skills-container">

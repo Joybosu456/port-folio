@@ -20,38 +20,44 @@ const Projects = () => {
     {
       title: "E-KYC",
       company: "Bajaj Broking",
-      desc: "Worked on the development of an Electronic Know Your Customer (EKYC) onboarding platform, designed to streamline the customer verification process for financial services. The platform aimed to offer a secure, user-friendly experience for customers to complete their KYC requirements online, improving efficiency and compliance with regulatory standards.",
-      tags: ["React", "SCSS", "Bootstrap", "Axios"]
+      desc: "Built a remote identity-verification platform for financial institutions supporting Aadhaar, PAN and Passport document submission with real-time automated validation via API integrations. Reduced manual intervention and improved onboarding speed, fraud prevention and compliance.",
+      tags: ["React.js", "REST APIs", "HTML5", "CSS3", "JavaScript"],
+      liveUrl: "https://ekyc.bajajfinservsecurities.in"
     },
     {
       title: "E-KYC 3.0",
       company: "Bajaj Broking",
-      desc: "Worked on the development of an Electronic Know Your Customer (EKYC) onboarding platform, designed to streamline the customer verification process for financial services. The platform aimed to offer a secure, user-friendly experience for customers to complete their KYC requirements online, improving efficiency and compliance with regulatory standards.",
-      tags: ["React(ViteJS)", "SCSS", "Hooks", "Bootstrap", "Axios"]
+      desc: "Built a remote identity-verification platform for financial institutions supporting Aadhaar, PAN and Passport document submission with real-time automated validation via API integrations. Reduced manual intervention and improved onboarding speed, fraud prevention and compliance.",
+      tags: ["React.js", "Vite", "REST APIs", "SCSS", "JavaScript"],
+      liveUrl: "https://ekyc.bajajfinservsecurities.in"
     },
     {
-      title: "Telecaller Dashboard",
+      title: "AI-Cursor Code Telecaller",
       company: "Bajaj Broking",
-      desc: "Developed a frontend solution to enhance the EKYC onboarding process by integrating a telecaller support system. Designed and implemented a dedicated dashboard for telecallers using React.js. The dashboard included features for monitoring ongoing onboarding processes, viewing client statuses, and accessing real-time issue reports, allowing instant support.",
-      tags: ["React", "SCSS", "Bootstrap", "Axios"]
+      desc: "Developed a frontend solution integrating telecaller assistance for E-KYC onboarding, providing real-time support during onboarding and helping reduce friction in the customer experience.",
+      tags: ["React", "SCSS", "Bootstrap", "Axios"],
+      liveUrl: "https://cosmos.bajajfinservsecurities.in"
     },
     {
       title: "RM Portal",
       company: "Bajaj Broking",
-      desc: "Contributed to the development of a Risk Management Portal, providing tools for risk assessment, tracking, and reporting. The project aimed to address issues faced by clients during onboarding and enable telecallers to provide real-time assistance, thereby improving the overall customer experience and reducing onboarding friction.",
-      tags: ["React", "SCSS", "Ant-Design", "REST API"]
+      desc: "Contributed to a Risk Management Portal providing tools for risk assessment, tracking and reporting.",
+      tags: ["React", "SCSS", "Ant-Design", "REST API"],
+      liveUrl: "https://cosmos.bajajfinservsecurities.in"
     },
     {
       title: "IAM",
       company: "Bajaj Broking",
-      desc: "Developed and optimized an IAM system for managing user roles, permissions, and authentication with a focus on security and user management.",
-      tags: ["Vite", "SCSS", "Recoil"]
+      desc: "Developed and optimized an Identity and Access Management system for managing user roles, permissions and authentication with a focus on security.",
+      tags: ["React.js", "REST APIs", "HTML5", "CSS3", "TypeScript"],
+      liveUrl: "https://iam.bajajfinservsecurities.in"
     },
     {
-      title: "cosmos",
+      title: "Trading Portal (BFSL Trading Application)",
       company: "Bajaj Broking",
-      desc: "An internal administrative dashboard for managing client portfolios and market data tracking.",
-      tags: ["React", "Charts.js", "SCSS"]
+      desc: "Built a responsive, user-friendly trading portal displaying real-time stock market data with dynamic charts, live market updates and portfolio management. Implemented secure user authentication and integrated RESTful APIs with Redux for efficient state management.",
+      tags: ["React.js", "Redux", "REST APIs", "HTML5", "CSS3", "JavaScript"],
+      liveUrl: "https://bfsltrade.bajajfinservsecurities.in/base/login"
     },
     {
       title: "HNI-ekyc",
@@ -85,7 +91,13 @@ const Projects = () => {
               <a href="#" className="project-link" aria-label="View Source">
                 <FaGithub size={20} />
               </a>
-              <a href="#" className="project-link" aria-label="Live Demo">
+              <a
+                href={project.liveUrl || "#"}
+                className="project-link"
+                aria-label="Live Demo"
+                target={project.liveUrl ? "_blank" : undefined}
+                rel={project.liveUrl ? "noopener noreferrer" : undefined}
+              >
                 <ExternalLink size={20} />
               </a>
             </div>

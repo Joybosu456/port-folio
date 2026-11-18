@@ -10,7 +10,7 @@ const Hero = () => {
         <h1 className="hero-name text-gradient">Joy Basu</h1>
         <h3 className="hero-role">Frontend Developer</h3>
         <p className="hero-description">
-          With 4.5 years of experience building dynamic, scalable, and responsive web applications. 
+          With 4.5 years of experience building dynamic, scalable, and responsive web applications.
           I specialize in creating premium digital experiences using React, Next.js, and modern CSS.
         </p>
         <div className="hero-actions">
@@ -33,7 +33,7 @@ const Hero = () => {
   name: "Joy Basu",
   role: "Frontend Dev",
   experience: "4.5 Years",
-  skills: ["React", "Next.js", "TypeScript"]
+  skills: ["Reactjs", "Next.js","JavaScript" ,"TypeScript","Redux]
 };`}</code></pre>
         </div>
       </div>
