@@ -64,6 +64,10 @@
   justify-content: center;
 }
 
+.resume-download {
+  gap: 0.5rem;
+}
+
 .btn-secondary:hover {
   background: rgba(255, 255, 255, 0.05);
   border-color: var(--text-primary);

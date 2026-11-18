@@ -1,5 +1,5 @@
-import React from 'react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Download } from 'lucide-react';
+import resume from '../../assets/Resume (7).pdf';
 import './Hero.css';
 
 const Hero = () => {
@@ -19,6 +19,10 @@ const Hero = () => {
           </a>
           <a href="#contact" className="btn-secondary">
             Contact Me
+          </a>
+          <a href={resume} className="btn-secondary resume-download" download="Joy-Basu-Resume.pdf">
+            <Download size={18} />
+            Download Resume
           </a>
         </div>
       </div>
