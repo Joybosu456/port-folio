@@ -32,7 +32,7 @@ const Projects = () => {
       liveUrl: "https://ekyc.bajajfinservsecurities.in"
     },
     {
-      title: "AI-Cursor Code Telecaller",
+      title: "Telecaller Assistance for E-KYC",
       company: "Bajaj Broking",
       desc: "Developed a frontend solution integrating telecaller assistance for E-KYC onboarding, providing real-time support during onboarding and helping reduce friction in the customer experience.",
       tags: ["React", "SCSS", "Bootstrap", "Axios"],
