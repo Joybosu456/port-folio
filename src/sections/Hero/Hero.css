@@ -152,11 +152,19 @@ pre {
   .hero {
     flex-direction: column;
     text-align: center;
+    min-height: auto;
     padding-top: 6rem;
+    padding-bottom: 2rem;
+    gap: 2rem;
+  }
+
+  .hero-content,
+  .hero-visual {
+    width: 100%;
   }
   
   .hero-description {
-    margin: 0 auto 2.5rem;
+    margin: 0 auto 1.5rem;
   }
   
   .hero-actions {
@@ -169,13 +177,17 @@ pre {
   
   .code-snippet {
     transform: none;
-    margin-top: 2rem;
+    margin-top: 0;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
+  .hero {
+    gap: 1.5rem;
+  }
+
   .hero-name {
-    font-size: 2.5rem;
+    font-size: clamp(2.5rem, 11vw, 3.5rem);
   }
   
   .hero-role {
@@ -184,13 +196,27 @@ pre {
   
   .hero-actions {
     flex-direction: column;
-    width: 100%;
-    gap: 1rem;
+    width: min(100%, 360px);
+    margin: 0 auto;
+    gap: 0.75rem;
   }
   
-  .btn-primary, .btn-secondary {
+  .hero-actions > a {
     width: 100%;
+    min-height: 48px;
     justify-content: center;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .code-snippet {
+    padding: 1rem;
+  }
+
+  .code-snippet pre {
+    font-size: 0.75rem;
   }
   
   .orb-1 {
